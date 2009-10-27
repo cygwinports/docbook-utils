@@ -1,0 +1,7 @@
+DESCRIPTION="Converts DocBook files to other formats"
+HOMEPAGE="http://sources.redhat.com/docbook-tools/"
+SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${P}.tar.gz"
+
+DISTCLEANFILES="COPYING INSTALL install-sh missing mkinstalldirs"
+
+MAKEOPTS+=" htmldir=/usr/share/doc/${PN}/html"

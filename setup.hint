@@ -1,0 +1,10 @@
+category: Text
+requires: bash docbook-dsssl docbook-sgml30 docbook-sgml31 docbook-sgml40 docbook-sgml41 docbook-sgml42 docbook-sgml43 docbook-sgml44 docbook-sgml45 docbook-xml412 docbook-xml42 docbook-xml43 docbook-xml44 docbook-xml45 grep jadetex lynx openjade OpenSP perl perl-SGMLSpm sed sgml-common which
+sdesc: "Converts DocBook to other formats"
+ldesc: "DocBook is a schema (available in several languages including 
+RELAX NG, SGML and XML DTDs, and W3C XML Schema) maintained by the 
+DocBook Technical Committee of OASIS. It is particularly well suited to 
+books and papers about computer hardware and software (though it is by 
+no means limited to these applications).
+
+This package provides commands to convert DocBook files to other formats."
