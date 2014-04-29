@@ -1,6 +1,6 @@
 NAME="docbook-utils"
 VERSION=0.6.14
-RELEASE=1
+RELEASE=2
 CATEGORY="Text"
 SUMMARY="Converts DocBook to other formats"
 DESCRIPTION="DocBook is a schema (available in several languages including
@@ -11,9 +11,22 @@ to these applications).
 This package provides commands to convert DocBook files to other formats."
 HOMEPAGE="http://sources.redhat.com/docbook-tools/"
 SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-spaces.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-2ndspaces.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-w3mtxtconvert.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-grepnocolors.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-sgmlinclude.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-rtfmanpage.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-papersize.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-nofinalecho.patch
+	http://pkgs.fedoraproject.org/cgit/docbook-utils.git/plain/docbook-utils-newgrep.patch
+"
 
-REQUIRES="docbook-dsssl docbook-sgml30 docbook-sgml31 docbook-sgml40 docbook-sgml41 docbook-sgml42 docbook-sgml43 docbook-sgml44 docbook-sgml45 docbook-xml412 docbook-xml42 docbook-xml43 docbook-xml44 docbook-xml45 grep jadetex lynx openjade OpenSP perl perl-SGMLSpm sed sgml-common which"
+ARCH=noarch
+
+REQUIRES="docbook-dsssl docbook-sgml30 docbook-sgml31 docbook-sgml40 docbook-sgml41 docbook-sgml42 docbook-sgml43 docbook-sgml44 docbook-sgml45"
+REQUIRES+=" docbook-xml412 docbook-xml42 docbook-xml43 docbook-xml44 docbook-xml45"
+REQUIRES+=" grep lynx openjade OpenSP sed sgml-common texlive-collection-htmlxml which"
 
 DISTCLEANFILES="COPYING INSTALL install-sh missing mkinstalldirs"
-
-MAKEOPTS+=" htmldir=/usr/share/doc/${NAME}/html"
